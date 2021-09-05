@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  display: grid;
+  height: 100vh;
+  grid-template-rows: repeat(7,1fr);
+  grid-template-columns: repeat(5, 1fr);
+  font-family: 'Baloo Bhai 2', cursive;
+}
+
+
+                                  /* NAV */
+nav{
+  grid-column: 1 / span 7;
+  grid-row: 1 ;
+
+  background-color: #FFB319;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav h1{
+  font-size: 45px;
+  font-family: 'Oswald', sans-serif;
+}
+
+                                  /* MAIN */
+
+
+main{
+  grid-column: 1 / span 4;
+  grid-row: 2 / span 8;
+  background-color: #FFE194;
+  overflow-y: scroll;
+  text-align: center;
+}
+main h2{
+  margin: 20px;
+  font-weight: bold;
+  font-size: 2rem;
+  border-bottom: 3px ridge black;
+}
+main div{
+  height: 200px;
+  width: 80%;
+  margin: 10px auto;
+  border: 2px solid #B8DFD8;
+}
+
+                                  /* ASIDE */
+
+aside{
+  grid-column: 5 / span 1;
+  grid-row: 2 / span 8;
+  background-color: #E8F6EF;
+  overflow-y: scroll;
+
+}
+
+aside h3{
+  font-size: 1.75rem;
+  text-align:  center;
+  margin: 15px;
+}
+
+.offers{
+  height: 100%;
+}
+
+.card{
+  height: 40%;
+  margin: 10px auto;
+  border: 2px solid #B8DFD8;
+  width: 80%;
+
+  border-radius: 5px;
+}
+
+                        /* MEDIA QUERIES */
+@media (max-width:800px) {
+  body{
+    display: flex;
+    flex-direction: column;
+  }
+  main{
+    grid-column: 1;
+    grid-row: 2;
+    
+  }
+  aside{
+    grid-column: 1;
+    grid-row: 3;
+   }
+
+  .offers {
+    display: flex;
+    height: 100%;
+    overflow-x: scroll;
+  }
+
+  .offers div{
+    flex: 0 0 400px;
+    height:300px ;
+    margin: 10px;
+  }
+}
+                        
