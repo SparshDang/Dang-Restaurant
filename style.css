@@ -47,6 +47,13 @@ main h2{
   font-size: 2rem;
   border-bottom: 3px ridge black;
 }
+
+.chartsContainer{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
 .charts{
   height: 200px;
   width: 80%;
@@ -58,9 +65,16 @@ main h2{
 .title{
   margin: 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
+  text-align: left;
+}
+
+.information{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
   text-align: left;
 }
 
@@ -70,11 +84,11 @@ main h2{
 
 .description{
   color: grey;
+  margin: 10px;
 }
 
 .price{
   font-size: 23px;
-  margin: 10px 20px;
 }
 
                                   /* ASIDE */
@@ -101,13 +115,14 @@ aside h3{
   height: 300px;
   margin: 10px auto;
   border: 2px solid #B8DFD8;
-  width:200px;
+  width:auto;
   border-radius: 5px;
 }
 
 .card img{
   height: 100%;
   width: 100%;
+  object-fit: cover;
 }
 
                         /* MEDIA QUERIES */
@@ -119,8 +134,20 @@ aside h3{
   main{
     grid-column: 1;
     grid-row: 2;
-    
   }
+
+  .chartsContainer{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .charts{
+    height: auto;
+    width: auto;
+    flex-direction: column;
+    flex: 0 0 300px;
+  }
+
+
   aside{
     grid-column: 1;
     grid-row: 3;
