@@ -60,6 +60,7 @@ main h2{
   margin: 10px auto;
   border: 2px solid #B8DFD8;
   display: flex;
+  transition: all 0.2s ease-in-out;
 }
 
 .title{
@@ -91,6 +92,14 @@ main h2{
   font-size: 23px;
 }
 
+.charts:hover{
+  position: relative;
+  top: -10px;
+  left: -10px;
+  background-color: #B8DFD8;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+}
+
                                   /* ASIDE */
 
 aside{
@@ -98,7 +107,7 @@ aside{
   grid-row: 2 / span 8;
   background-color: #E8F6EF;
   overflow-y: scroll;
-
+  width: 100%;
 }
 
 aside h3{
