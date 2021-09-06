@@ -47,11 +47,34 @@ main h2{
   font-size: 2rem;
   border-bottom: 3px ridge black;
 }
-main div{
+.charts{
   height: 200px;
   width: 80%;
   margin: 10px auto;
   border: 2px solid #B8DFD8;
+  display: flex;
+}
+
+.title{
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.title h3{
+  font-size: 25px; 
+}
+
+.description{
+  color: grey;
+}
+
+.price{
+  font-size: 23px;
+  margin: 10px 20px;
 }
 
                                   /* ASIDE */
@@ -75,12 +98,16 @@ aside h3{
 }
 
 .card{
-  height: 40%;
+  height: 300px;
   margin: 10px auto;
   border: 2px solid #B8DFD8;
-  width: 80%;
-
+  width:200px;
   border-radius: 5px;
+}
+
+.card img{
+  height: 100%;
+  width: 100%;
 }
 
                         /* MEDIA QUERIES */
@@ -101,12 +128,14 @@ aside h3{
 
   .offers {
     display: flex;
+    flex-wrap: wrap;
     height: 100%;
-    overflow-x: scroll;
+    align-items: center;
+    justify-content: center;
   }
 
   .offers div{
-    flex: 0 0 400px;
+    flex: 0 0 200px;
     height:300px ;
     margin: 10px;
   }
